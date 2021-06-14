@@ -16,6 +16,10 @@ class ProductList{
         ];
     }
 
+    sum () {
+        return this.goods.reduce((sum, { price }) => sum + price, 0);
+    }
+
     render(){
         const block = document.querySelector(this.container);
         for(let product of this.goods){
