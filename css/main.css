@@ -72,8 +72,7 @@ summary {
   margin-top: 3rem;
 }
 .products__img {
-  width: 200px;
-  height: 100px;
+  width: 100%;
   margin-bottom: 20px;
 }
 .products__card {

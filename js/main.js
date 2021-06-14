@@ -6,9 +6,9 @@ const products = [
     {id: 4, title: 'Gamepad', price: 4500},
 ];
 
-const renderProduct = item => {
+const renderProduct = (item, img = 'https://via.placeholder.com/200x150') => {
     return `<div class="products__card">
-            <img class="products__img" src="img/picture_1.jpg" alt="заглушка">
+            <img class="products__img" src="${img}" alt="заглушка">
             <h3 class="products__title">${item.title}</h3>
             <p class="products__price">price: <span class="products__price-col">${item.price}</span> rub</p>
             <button class="products__btn by-btn">Add to card</button>
@@ -16,7 +16,9 @@ const renderProduct = item => {
 };
 
 const renderProducts = list => {
-    document.querySelector('.products').innerHTML = list.map(item => renderProduct(item)).join("");;
+    document.querySelector('.products').innerHTML = list.map(item => renderProduct(item)).join("");
 };
 
 renderProducts(products);
+
+
