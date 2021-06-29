@@ -59,6 +59,10 @@ input {
     width: 100%;
 }
 
+.wrapinput {
+    margin-bottom: 30px;
+}
+
 .form-control.success input {
     border-color: #2ecc71;
 }
@@ -96,7 +100,7 @@ input {
 }
 
 
-.form-control.error .i.fa-check-circle {
+.form-control.error .i.fa-exclamation-circle {
     color: #e74c3c;
     visibility: visible;
 }
@@ -132,3 +136,25 @@ input {
     width: 100%;
     padding: 10px;
 }
+
+.error-msg{
+    color: red;
+    margin: 10px 0;
+}
+.invalid {
+    border: 2px solid red !important;
+}
+.valid{
+    border: 2px solid green;
+}
+
+.invalid .i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.valid .i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
