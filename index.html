@@ -11,12 +11,13 @@
         <header>
             <div class="logo">Интернет Магазин</div>
             <div class="cart">
-                <form action="#" class="search-form" @submit.prevent="filter">
-                    <input type="text" class="search-field" v-model="userSearch">
-                    <button class="btn-search" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </form>
+                <search></search>
+<!--                <form action="#" class="search-form" @submit.prevent="filter">-->
+<!--                    <input type="text" class="search-field" v-model="userSearch">-->
+<!--                    <button class="btn-search" type="submit">-->
+<!--                        <i class="fas fa-search"></i>-->
+<!--                    </button>-->
+<!--                </form>-->
 
                 <button class="btn-cart" type="button" @click="showCart = !showCart">Корзина</button>
                 <cart :cart-items="cartItems"
@@ -28,6 +29,7 @@
             </div>
         </header>
         <main>
+            <error-data v-if="dataError"></error-data>
             <products :products="filtered" :img="imgProduct" @add-product="addProduct"></products>
         </main>
     </div>
@@ -35,6 +37,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <script src="js/productComp.js"></script>
+    <script src="js/errorComp.js"></script>
     <script src="js/cartComp.js"></script>
     <script src="js/filterComp.js"></script>
     <script src="js/main.js"></script>

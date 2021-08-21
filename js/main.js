@@ -13,7 +13,8 @@ const app = new Vue({
         imgCart: 'https://via.placeholder.com/50x100',
         userSearch: '',
         showCart: false,
-
+        isError: false,
+        dataError: false
     },
     methods: {
         getJson(url){
@@ -21,6 +22,7 @@ const app = new Vue({
                 .then(result => result.json())
                 .catch(error => {
                     console.log(error);
+                    this.dataError = true;
                 })
         },
         filter() {
@@ -67,13 +69,13 @@ const app = new Vue({
                     this.filtered.push(el);
                 }
             });
-        this.getJson(`getProducts.json`)
-            .then(data => {
-                for(let el of data){
-                    this.products.push(el);
-                    this.filtered.push(el);
-                }
-            });
+        // this.getJson(`getProducts.json`)
+        //     .then(data => {
+        //         for(let el of data){
+        //             this.products.push(el);
+        //             this.filtered.push(el);
+        //         }
+        //     });
         this.getJson(`${API + this.cartUrl}`)
             .then(data => {
                 for(let el of data.contents){

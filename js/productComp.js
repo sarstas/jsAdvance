@@ -16,7 +16,7 @@ Vue.component('product', {
                     <div class="desc">
                         <h3>{{ product.product_name }}</h3>
                         <p>{{ product.price }} $</p>
-                        <button class="buy-btn" @click="$parent.$emit('addProduct', product)">Buy</button>
+                        <button class="buy-btn" @click="$parent.$emit('add-product', product)">Buy</button>
                     </div>
                 </div>`
 });

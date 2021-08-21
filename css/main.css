@@ -197,4 +197,10 @@ img {
   border-bottom: 2px solid #fafafa;
 }
 
+.error-title {
+  display: flex;
+  justify-content: center;
+  color: crimson;
+}
+
 /*# sourceMappingURL=main.css.map */
