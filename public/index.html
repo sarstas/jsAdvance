@@ -11,26 +11,13 @@
         <header>
             <div class="logo">Интернет Магазин</div>
             <div class="cart">
-                <search></search>
-<!--                <form action="#" class="search-form" @submit.prevent="filter">-->
-<!--                    <input type="text" class="search-field" v-model="userSearch">-->
-<!--                    <button class="btn-search" type="submit">-->
-<!--                        <i class="fas fa-search"></i>-->
-<!--                    </button>-->
-<!--                </form>-->
-
-                <button class="btn-cart" type="button" @click="showCart = !showCart">Корзина</button>
-                <cart :cart-items="cartItems"
-                      :img="imgCart"
-                      :visibility="showCart"
-                      @remove="removeProduct">
-                </cart>
-
+                <filter-el></filter-el>
+                <cart ref="cart"></cart>
             </div>
         </header>
         <main>
-            <error-data v-if="dataError"></error-data>
-            <products :products="filtered" :img="imgProduct" @add-product="addProduct"></products>
+            <error ref="error"></error>
+            <products ref="products"></products>
         </main>
     </div>
 
