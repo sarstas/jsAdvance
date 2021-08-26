@@ -1,0 +1,272 @@
+@keyframes scale-up-top
+   0%
+      transform: scale(0.5)
+      transform-origin: 50% 0%
+
+   100%
+      transform: scale(1)
+      transform-origin: 50% 0%
+
+@keyframes flip-horizontal-bottom
+   0%
+      transform: rotateX(0)
+
+   100%
+      transform: rotateX(-180deg)
+
+.subheader
+   background: $background
+   display: flex
+   justify-content: space-between
+   align-items: center
+   flex-wrap: wrap
+
+   &-title
+      font-weight: normal
+      font-size: 24px
+      line-height: 29px
+      color: #F16D7F
+      margin-top: 60px
+      margin-bottom: 60px
+
+   &-breadcrumbs
+      display: flex
+
+   &-link
+      font-weight: 300
+      font-size: 14px
+      line-height: 17px
+      color: #636363
+      &:hover
+         color: $targetColor
+
+   &-link:not(:last-child)::after
+      content: "/"
+      display: inline
+      color: #636363
+      font-weight: 300
+      font-size: 14px
+      line-height: 17px
+      padding-right: 4px
+      padding-left: 4px
+
+   &-link:last-child
+      font-weight: bold
+      color: #F16D7F
+
+   //.product
+
+summary
+   display: block
+   outline: none
+   cursor: pointer
+   //outline: none
+
+   &::-webkit-details-marker
+      display: none
+
+.sort-box
+   display: flex
+   padding-top: 51px
+
+   &__filter
+      position: relative
+
+//.arrow
+//   display: flex
+//   align-items: center
+//   border: solid #6F6E6E
+//   border-width: 0 2px 2px 0
+//   display: inline-block
+//   padding: 3px
+//   transform: rotate(45deg)
+//   margin-left: 10px
+
+.sort
+   margin-top: 13px
+   margin-left: 390px
+
+   &__ul
+      display: flex
+
+   &__item-ul
+      transition: all .2s
+
+   &__item
+      position: relative
+      font-weight: normal
+      font-size: 14px
+      line-height: 17px
+      color: #6F6E6E
+      padding-right: 20px
+      padding-bottom: 10px
+      &:not(:last-child)
+         margin-right: 27px
+
+      &:hover
+         cursor: pointer
+
+      &:hover &-ul
+         display: block
+         animation: scale-up-top 0.1s ease-in-out both
+
+      &::before
+         content: ""
+         position: absolute
+         top: 9px
+         right: 5px
+         width: 8px
+         height: 2px
+         background-color: #6f6e6e
+         transform: rotate(45deg)
+         &:hover
+            transform: rotate(-45deg)
+      &::after
+         content: ""
+         position: absolute
+         top: 9px
+         right: 0px
+         width: 8px
+         height: 2px
+         background-color: #6f6e6e
+         transform: rotate(-45deg)
+         &:hover
+            transform: rotate(45deg)
+      &-ul
+         display: none
+         padding: 7px 30px 11px 9px
+         margin-top: 5px
+         position: absolute
+         background: #FFFFFF
+         box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+         z-index: 3
+         transition: all .3s
+
+      &-li
+         display: flex
+         padding-bottom: 10px
+
+      &-check
+         margin-right: 9px
+
+.filter
+   padding: 13px 16px 16px
+   position: absolute
+   z-index: 2
+   width: 75px
+
+   &__img
+      margin-left: 11px
+      &-color
+         transition: 0.2s
+
+   &__name
+      display: flex
+      align-items: center
+      font-size: 14px
+      line-height: 17px
+      color: #000000
+      transition: 0.2s
+
+      &:hover
+         color: $targetColor
+
+      &:hover .filter__img-color
+         fill: $targetColor
+
+   &__category
+      margin-top: 26px
+   &__link
+      font-weight: normal
+      font-size: 14px
+      line-height: 17px
+      color: #6F6E6E
+      margin-bottom: 11px
+
+      &:hover
+         color: $targetColor
+
+   &__category
+      font-weight: normal
+      font-size: 14px
+      line-height: 37px
+      color: $textColor
+      padding-left: 11px
+      height: 37px
+      border-left: 5px solid $targetColor
+      border-bottom: 1px solid #EBEBEB
+
+   &__ul
+      padding-top: 36px
+      padding-bottom: 24px
+      padding-left: 11px
+
+.filter[open]
+   width: 360px
+   box-sizing: border-box
+   background: #FFFFFF
+   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+   //transition: all .2s
+   animation: scale-up-top 0.1s ease-in-out both
+
+   .filter__name
+      color: $targetColor
+
+   .filter__img
+      &-color
+         fill: $targetColor
+.filter__details[open]
+
+   .filter__category
+      color: $targetColor
+
+.pages
+   display: flex
+   justify-content: center
+   margin-bottom: 96px
+
+   &__list
+      display: flex
+      align-items: center
+      margin-left: 18px
+      margin-right: 18px
+      width: 202px
+      border: 1px solid #EBEBEB
+      border-radius: 6px
+      padding: 12px 15px
+      ma
+
+      &-item:first-child &-link
+         color: $targetColor
+
+      &-item
+         display: inline-block
+         flex-basis: auto
+         flex-grow: 1
+
+      &-link
+         display: flex
+         justify-content: center
+         font-weight: 300
+         font-size: 16px
+         line-height: 19px
+         color: #C4C4C4
+         &:hover
+            color: $targetColor
+
+         &span
+            display: flex
+
+   &__list::before
+      content: url(..//img/vector-left.svg)
+      display: block
+      width: 8px
+      height: 14px
+      margin-right: 15px
+
+   &__list::after
+      content: url(..//img/vector-right.svg)
+      display: block
+      width: 8px
+      height: 14px
+      margin-left: 15px
