@@ -60,4 +60,3 @@ const app = new Vue({
     }
 })
 
-

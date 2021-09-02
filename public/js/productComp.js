@@ -36,11 +36,10 @@ Vue.component('products', {
 Vue.component('product', {
     props: ['product', 'img'],
     data(){
-        const product_img = this.img + this.product.id_product + ".jpg"
+        const product_img = `${this.img}${this.product.id_product}.jpg`
         return {
             product_img
         }
-
     },
     template: `
                 <div class="product-item">
