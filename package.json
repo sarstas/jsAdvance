@@ -1,5 +1,5 @@
 {
-  "name": "jsAdvance",
+  "name": "jsadvance",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/sarstas/jsAdvance.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sarstas/jsAdvance/issues"
   },
-  "homepage": "https://github.com/sarstas/jsAdvance#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/sarstas/jsAdvance#readme"
 }
