@@ -1,0 +1,22 @@
+{
+  "name": "jsadvance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "express": "npm server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarstas/jsAdvance.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarstas/jsAdvance/issues"
+  },
+  "homepage": "https://github.com/sarstas/jsAdvance#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

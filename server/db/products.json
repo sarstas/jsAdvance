@@ -1,0 +1,32 @@
+[
+  {
+    "id_product": 124,
+    "product_name": "Look num1",
+    "price": 3000
+  },
+  {
+    "id_product": 457,
+    "product_name": "Look num2",
+    "price": 5000
+  },
+  {
+    "id_product": 123,
+    "product_name": "Look num3",
+    "price": 7600
+  },
+  {
+    "id_product": 456,
+    "product_name": "Look num4",
+    "price": 10000
+  },
+  {
+    "id_product": 312,
+    "product_name": "Look num5",
+    "price": 14600
+  },
+  {
+    "id_product": 121,
+    "product_name": "Look num6",
+    "price": 5600
+  }
+]

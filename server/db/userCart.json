@@ -1,0 +1,12 @@
+{
+    "amount": 46600,
+    "countGoods": 2,
+    "contents": [
+        {
+            "quantity": 9,
+            "id_product": 457,
+            "product_name": "Look num2",
+            "price": 5000
+        }
+    ]
+}
